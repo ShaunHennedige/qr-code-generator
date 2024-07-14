@@ -1,38 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cloud-services {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cloud-services p {
+  margin-bottom: 10px;
+}
+
+.cloud-buttons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.cloud-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.cloud-button:hover {
+  transform: scale(1.1);
+}
+
+.cloud-button img {
+  width: 40px;
+  height: 40px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.qr-placeholder {
+  width: 256px;
+  height: 256px;
+  background-color: #f0f0f0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: #888;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
   color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button:first-child {
+  background-color: #4CAF50;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:first-child:hover {
+  background-color: #45a049;
+}
+
+button:first-child:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.refresh-button {
+  background-color: #3498db;
+}
+
+.refresh-button:hover {
+  background-color: #2980b9;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: auto;
 }
